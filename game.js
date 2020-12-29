@@ -37,11 +37,27 @@ function playSound(name) {
 
 }
 
-function animatePress(currentColor){
-    $("#"+ currentColor).addClass("pressed");
+function animatePress(currentColor) {
+    $("#" + currentColor).addClass("pressed");
 
     setTimeout(function () {
-    $("#" + currentColor).removeClass("pressed");
-  }, 100);
+        $("#" + currentColor).removeClass("pressed");
+    }, 100);
 
- }
+}
+
+
+function checkAnswer(currrentLevel) {
+    if (gamePattern[currrentLevel] === userClickedPattern[currrentLevel]) {
+    
+
+
+    if (userClickedPattern.length === gamePattern.length) {
+        setTimeout(function () {
+            nextSequence();
+        }, 1000);
+    }
+
+}
+
+}
